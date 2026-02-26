@@ -1,0 +1,58 @@
+* {
+    font-family: JetBrains Mono Nerd Font;
+    font-size: 11px;
+    border: none;
+    border-radius: 8px;
+}
+
+window {
+    background-color: #1a1b26;
+    color: #a9b1d6;
+    border: 1px solid #414868;
+}
+
+#content {
+    children: [input, listview];
+    padding: 8px;
+    border: none;
+}
+
+#input {
+    margin: 0 0 8px 0;
+    padding: 8px;
+    border: none;
+    background-color: #24283b;
+    color: #c0caf5;
+}
+
+#input:focus {
+    border: 1px solid #7aa2f7;
+}
+
+#listview {
+    layout: vertical;
+    spacing: 4px;
+    fixed-height: false;
+    cycle: true;
+}
+
+#listview element {
+    padding: 8px 12px;
+    background-color: transparent;
+    color: #a9b1d6;
+}
+
+#listview element:selected {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+}
+
+#listview element:hover {
+    background-color: #414868;
+}
+
+#text {
+    margin: 4px;
+    padding: 4px;
+    color: #7aa2f7;
+}

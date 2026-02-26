@@ -1,0 +1,102 @@
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.85);
+    color: #a9b1d6;
+    border-bottom: 2px solid #7aa2f7;
+}
+
+#workspaces {
+    margin: 0 10px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #565f89;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #7aa2f7;
+    background-color: #24283b;
+    border-radius: 4px;
+}
+
+#workspaces button.urgent {
+    color: #f7768e;
+    background-color: rgba(247, 118, 142, 0.2);
+    border-radius: 4px;
+}
+
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#battery,
+#tray {
+    padding: 0 12px;
+    margin: 4px 6px;
+    background-color: #24283b;
+    border-radius: 8px;
+    color: #7dcfff;
+}
+
+#battery {
+    color: #9ece6a;
+}
+
+#battery.warning {
+    color: #e0af68;
+}
+
+#battery.critical {
+    color: #f7768e;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(247, 118, 142, 0.3);
+        color: #f7768e;
+    }
+}
+
+#network.disconnected {
+    color: #f7768e;
+}
+
+#window {
+    color: #c0caf5;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+#tray {
+    background: transparent;
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+tooltip {
+    background: #1a1b26;
+    color: #c0caf5;
+    border: 1px solid #7aa2f7;
+    border-radius: 4px;
+}
+
+tooltip label {
+    color: #c0caf5;
+}
